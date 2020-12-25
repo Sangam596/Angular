@@ -1,0 +1,17 @@
+nav
+{
+  position: sticky;
+  top: 2px;
+  background-color:coral;
+  padding: 10px;
+  margin-bottom: 20px;
+
+}
+a
+{
+  color: black;
+  padding: 20px;
+  font-weight: bolder;
+  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

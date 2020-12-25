@@ -1,0 +1,46 @@
+
+
+
+<fieldset style="text-align: center;">
+  <h2>Binding worked!</h2>
+  <h2>Welcome {{ename}} </h2>
+  <h2>{{20+20}}</h2>
+  <h2>{{"welcome "+ename}}</h2>
+  <h2>{{name1.length}}</h2>
+  <h2>{{name1.toUpperCase()}}</h2>
+  <h2>{{user()}}</h2>
+  <h2>{{localhosturl}}</h2>
+  <hr><hr>
+  <h1>Property Binding</h1>
+  <input [id]="myid" type="text" value="Sangam" >
+  <!-- <input bind-disabled="isdesabled"  type="text" value="Sangam" > -->
+  <hr><hr>
+  <h1>class Binding</h1>
+  <h2 class="text-success" >Sangam_Bgk 1</h2>
+  <h2 [class]="successclass" >Sangam_Bgk 2</h2>
+  <h2 class="text-danger" >Sangam_Bgk 3</h2>
+  <h2 [class.text-danger]="hasError" >class Binding 4</h2>
+  <h2 [ngClass]="messageclass" >ngClass binding 5</h2>
+  <hr><hr>
+  <h1>Style Binding</h1>
+  <h2 [style.color]="'Orange'" >Style Binding</h2>
+  <!-- <h2[style.color]="hasError ? 'red :'green' ">Style Binding</h2> -->
+  <h2 [style.color]="highlightcolor" >Style Binding 2</h2>
+  <h2 [ngStyle]="titlestyles" >ngStyle Binding 3</h2><hr><hr>
+
+  <h1>EventBinding</h1>
+  <button (click)="onClick($event)" >Greet</button>{{greeting}}
+  <button (click)="greeting='Welcome Sangam'" >Greet</button>
+  <hr>
+  <hr>
+  <h1>Template Reference Variables</h1>
+  <input #myInput type="text">
+  <button (click)="logmessage(myInput.value)" >Log</button>
+  <button (click)="logmessage(myInput)" >Log</button>
+  <hr>
+  <hr>
+  <h1>Two-Way Binding</h1>
+  <input [(ngModel)]="name" type="text">
+  <h4 style="display: inline;" >{{name}}</h4>
+
+</fieldset>

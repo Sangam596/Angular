@@ -1,0 +1,36 @@
+<fieldset style="text-align: center;" >
+  <legend>Structura-Directives</legend>
+  <div  >
+    <h1 *ngIf = "code ; else elseblock" >ngif directives works </h1>
+    <ng-template #elseblock ><h1  >else block works </h1></ng-template>
+    </div>
+    <!-- anathor way -->
+
+
+    <div *ngIf="directive; then ifblock; else elseblock2" ></div>
+
+    <ng-template #ifblock >
+      <h2>
+        if block
+      </h2>
+    </ng-template>
+
+    <ng-template #elseblock2>
+      <h2>
+        else block 2
+      </h2>
+    </ng-template>
+    <!-- ngSwich -->
+    <h1>ngSwitch</h1>
+    <div [ngSwitch]="color" >
+      <div *ngSwitchCase="'red'" ><h3>RED</h3></div>
+      <div *ngSwitchCase ="'green'" > <h3>GREEN</h3></div>
+      <div *ngSwitchCase="'blue'" ><h3> you picked BLUE</h3></div>
+      <div *ngSwitchDefault >color nt present</div>
+    </div>
+    <!-- ngFor -->
+    <div *ngFor="let n of names" >
+      <h1>{{n}}</h1>
+    </div>
+
+</fieldset>
