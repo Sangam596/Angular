@@ -9,13 +9,22 @@ import { User } from '../user';
 })
 export class FormsComponent implements OnInit {
   topics=["Angular","React","Node"];
-  userModel=new User('Sangam','sangameshbaluti@gmail.com',9742800920,'','morning',true);
+  userModel=new User('Sangam','sangameshbaluti@gmail.com',9742800920,'default','morning',true);
+  topicHasError=true;
 
 
-
-  constructor() { }
+   constructor() { }
 
   ngOnInit(): void {
   }
+  validateTopic(value: any)
+  {
+           if(value==='default'){
+            this.topicHasError=true;
+          }
+        else{
+            this.topicHasError=false;
+          }
+}
 
 }
